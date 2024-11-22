@@ -19,6 +19,8 @@ public class MainView implements GetProductListObserver, GetTypeListObserver {
     private JComboBox<String> typeComboBox;
     private MainController mainController;
 
+    public String maHang;
+
     public MainView(MainController mainControllerr) {
         this.mainController = mainControllerr;
         frame = new JFrame("Product Management");
@@ -101,6 +103,17 @@ public class MainView implements GetProductListObserver, GetTypeListObserver {
 
         JTable table = new JTable(tableModel);
         scrollPane.setViewportView(table);
+
+        // lắng nghe sự kiện chọn dòng
+        table.getSelectionModel().addListSelectionListener(e -> {
+            if (!e.getValueIsAdjusting()) {
+                int selectedRow = table.getSelectedRow();
+                if (selectedRow != -1) {
+                    // Lấy mã sản phẩm từ cột "Mã Hàng" (giả sử là cột 0)
+                    maHang = table.getValueAt(selectedRow, 0).toString();
+                }
+            }
+        });
     }
 
     @Override
@@ -111,6 +124,18 @@ public class MainView implements GetProductListObserver, GetTypeListObserver {
 
             typeComboBox.addItem(type.getType());
         }
+    }
+
+    public JButton getAddButton() {
+        return addButton;
+    }
+
+    public JButton getDeleteButton() {
+        return deleteButton;
+    }
+
+    public String getMaHang() {
+        return maHang;
     }
 }
 

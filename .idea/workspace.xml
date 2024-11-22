@@ -5,7 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="91a827fd-e7fe-4291-9a67-9a9a2917afda" name="Changes" comment="second commit">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/getTypeListMVVP/GetTypeListPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/getTypeListMVVP/GetTypeListPresenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/addProduct/AddProductDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/addProduct/AddProductDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/addProduct/AddProductDatabaseBoundary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/addProduct/AddProductInputBoundary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/addProduct/AddProductOutputBoundary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/addProduct/AddProductOutputDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/addProduct/AddProductPresenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/addProduct/AddProductUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/addProduct/AddProductView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/addProduct/AddProductViewModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/addProduct/observe/Publisher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/addProduct/observe/Subscriber.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/removeProduct/database/RemoveProductDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/removeProduct/database/RemoveProductDatabaseBoundary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/removeProduct/dto/RemoveProductDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/removeProduct/dto/RemoveProductOutputDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/removeProduct/usecase/RemoveProductInputBoundary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/removeProduct/usecase/RemoveProductUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/removeProduct/view/RemoveProductOutputBoundary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/removeProduct/view/RemoveProductPresenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/removeProduct/view/RemoveProductView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/removeProduct/view/RemoveProductViewModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/tool/NumericFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/database/MysqlConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/database/MysqlConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/MainView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/MainView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +50,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "baoacer"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/nguyenphamhoangvu852004/StoreManagementClean-Architecture.git",
+    "accountId": "87a71662-1d19-4b97-90db-6238811752e9"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 5
@@ -35,22 +74,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.MainView.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GetProductListSevenDayExpiryTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GetProductListSevenDayExpiryTest.getProductListSevenDayExpiryOK.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GetProductListTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GetProductListTest.testGetAllProductListOK.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/nphv8/Desktop/JavaSwingApps/store-manager/src/main/java/com/example/ui/getTypeListMVVP&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "Application.MainView.executor": "Run",
+    "JUnit.GetProductListSevenDayExpiryTest.executor": "Run",
+    "JUnit.GetProductListSevenDayExpiryTest.getProductListSevenDayExpiryOK.executor": "Run",
+    "JUnit.GetProductListTest.executor": "Run",
+    "JUnit.GetProductListTest.testGetAllProductListOK.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "bao",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Acer/Desktop/StoreManagementClean-Architecture/src/main/java/com/example",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Acer\Desktop\StoreManagementClean-Architecture\src\main\java\com\example" />
       <recent name="C:\Users\nphv8\Desktop\JavaSwingApps\store-manager\src\main\java\com\example\ui\getTypeListMVVP" />
       <recent name="C:\Users\nphv8\Desktop\JavaSwingApps\store-manager\src\main\java\com\example\ui\getAllProductListSevenDaysExpiryMVVP" />
       <recent name="C:\Users\nphv8\Desktop\JavaSwingApps\store-manager\src\main\java\com\example\addProduct" />
@@ -148,6 +194,14 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -156,6 +210,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1731212277921</updated>
+      <workItem from="1732285354792" duration="1203000" />
     </task>
     <task id="LOCAL-00001" summary="second commit">
       <option name="closed" value="true" />
@@ -167,6 +222,20 @@
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="second commit" />

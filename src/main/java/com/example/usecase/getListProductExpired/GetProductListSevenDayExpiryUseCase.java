@@ -20,22 +20,25 @@ public class GetProductListSevenDayExpiryUseCase implements InputBoundary {
     public GetProductListSevenDayExpiryUseCase(OutputBoundary outputBoundary, DatabaseBoundary databaseBoundary) {
         this.outputBoundary = outputBoundary;
         this.databaseBoundary = databaseBoundary;
-    }
 
+    }
     @Override
     public void execute(RequestData requestData) throws SQLException {
         String type = ((GetProductListSevenDayExpiryInputDTO) requestData).getType();
-
+        // gọi hàm lấy dữ liệu trong database
         List<HangHoa> listHangHoa = ((MysqlGetFoodList) databaseBoundary).getProductList(type);
         List<GetProductListSevenDayExpiryOutputDTO> listOutputDTOS = new ArrayList<>();
 
+        // Lọc sản phẩm sắp hết hạn trong 7 ngày
         LocalDate dateNow = LocalDate.now();
         for (HangHoa hangHoa : listHangHoa) {
             if (hangHoa instanceof HangThucPham hangThucPham) {
                 LocalDate ngayHetHan = hangThucPham.getNgayHetHan();
 
+                // Chỉ tính sản phẩm có ngày hết hạn trong vòng 7 ngày tới và chưa hết hạn
                 long daysUntilExpiry = java.time.temporal.ChronoUnit.DAYS.between(dateNow, ngayHetHan);
 
+                // Kiểm tra nếu ngày hết hạn trong vòng 7 ngày tới và chưa hết hạn
                 if (daysUntilExpiry >= 0 && daysUntilExpiry <= 7) {
                     GetProductListSevenDayExpiryOutputDTO getProductListOutputDTO = new GetProductListSevenDayExpiryOutputDTO(
                             hangThucPham.getMaHang(),

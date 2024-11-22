@@ -28,13 +28,8 @@ public class GetProductListSevenDaysExpiryView implements GetProductListSevenDay
                 "Mã Hàng", "Tên Hàng", "Số Lượng Tồn", "Đơn giá", "VAT"
         };
 
-        // Create a custom DefaultTableModel to make the table non-editable
-        tableModel = new DefaultTableModel(columns, 0) {
-            @Override
-            public boolean isCellEditable(int row, int column) {
-                return false; // Make all cells non-editable
-            }
-        };
+        // Create table model
+        tableModel = new DefaultTableModel(columns, 0);
         JTable table = new JTable(tableModel);
 
         // Add the table to a scroll pane

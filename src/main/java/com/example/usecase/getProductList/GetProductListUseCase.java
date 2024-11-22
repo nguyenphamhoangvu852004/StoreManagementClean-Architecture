@@ -39,6 +39,8 @@ public class GetProductListUseCase implements InputBoundary {
                     hangHoa.getSoLuongTon(),
                     hangHoa.getDonGia(),
                     hangHoa.tinhVat());
+
+            // Thêm vào danh sách outputDTO
             listOutputDTOS.add(getProductOutputDTO);
         }
 

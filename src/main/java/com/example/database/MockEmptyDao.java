@@ -13,5 +13,4 @@ public class MockEmptyDao implements DatabaseBoundary {
         return new ArrayList<>();
     }
 
-
 }

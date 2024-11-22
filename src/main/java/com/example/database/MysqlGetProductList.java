@@ -14,7 +14,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MysqlGetProductList implements DatabaseBoundary {
-
     public enum ProductType {
         HANG_DIEN_MAY("Hàng Điện Máy",
                 "SELECT h.maHang, h.tenHang, h.soLuongTon, h.donGia, d.thoiGianBaoHanh, d.congSuat, l.tenLoai "

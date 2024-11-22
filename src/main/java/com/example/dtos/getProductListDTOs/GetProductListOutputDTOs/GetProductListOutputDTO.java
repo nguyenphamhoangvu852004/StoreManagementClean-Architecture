@@ -1,24 +1,19 @@
-package com.example.dtos.getProductListDTOs;
+package com.example.dtos.getProductListDTOs.GetProductListOutputDTOs;
 
 public class GetProductListOutputDTO {
     protected String maHang;
     protected String tenHang;
-    protected String tenLoai;
     protected int soLuongTon;
     protected double donGia;
     protected double VAT;
-
-    public GetProductListOutputDTO(String maHang, String tenHang, String tenLoai, int soLuongTon, double donGia, double VAT) {
+    protected String tenLoai;
+    public GetProductListOutputDTO(String maHang, String tenHang, int soLuongTon, double donGia, double VAT,String tenLoai) {
         this.maHang = maHang;
         this.tenHang = tenHang;
-        this.tenLoai = tenLoai;
         this.soLuongTon = soLuongTon;
         this.donGia = donGia;
         this.VAT = VAT;
-    }
-
-    public String getTenLoai() {
-        return tenLoai;
+        this.tenLoai = tenLoai;
     }
 
     public String getMaHang() {
@@ -41,4 +36,12 @@ public class GetProductListOutputDTO {
         return VAT;
     }
 
+    public String getTenLoai() {
+        return tenLoai;
+    }
+
+    public void setTenLoai(String tenLoai) {
+        this.tenLoai = tenLoai;
+    }
 }
+

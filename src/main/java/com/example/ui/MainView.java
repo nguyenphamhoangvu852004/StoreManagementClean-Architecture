@@ -1,7 +1,10 @@
 package com.example.ui;
 
-import com.example.ui.getAllProductListMVVP.GetProductListObserver;
-import com.example.ui.getAllProductListMVVP.GetProductlistViewModel;
+import com.example.ui.getAllProductListMVVP.*;
+import com.example.ui.getAllProductListMVVP.GetProductListViewModel.DienMayViewModel;
+import com.example.ui.getAllProductListMVVP.GetProductListViewModel.GetProductlistViewModel;
+import com.example.ui.getAllProductListMVVP.GetProductListViewModel.SanhSuViewModel;
+import com.example.ui.getAllProductListMVVP.GetProductListViewModel.ThucPhamViewModel;
 import com.example.ui.getTypeListMVVP.GetTypeListObserver;
 import com.example.ui.getTypeListMVVP.GetTypeListViewModel;
 
@@ -9,7 +12,10 @@ import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Stream;
 
 public class MainView implements GetProductListObserver, GetTypeListObserver {
     private JFrame frame;
@@ -95,29 +101,68 @@ public class MainView implements GetProductListObserver, GetTypeListObserver {
 
     @Override
     public void updateGetProductList(List<GetProductlistViewModel> data) {
-        String[] columns = {"Mã Hàng", "Tên Hàng", "Số Lượng Tồn", "Đơn giá", "VAT"};
-        DefaultTableModel tableModel = new DefaultTableModel(columns, 0) {
+
+        String type = (String) typeComboBox.getSelectedItem();
+
+        String[] commonColumns = {"Mã Hàng", "Tên Hàng", "Số Lượng Tồn", "Đơn giá", "VAT"};
+        String[] additionalColumns;
+
+        switch (type) {
+            case "Hàng Thực Phẩm":
+                additionalColumns = new String[]{"Ngày Sản Xuất", "Ngày Hết Hạn", "Nhà Cung Cấp"};
+                break;
+            case "Hàng Sành Sứ":
+                additionalColumns = new String[]{"Nhà Sản Xuất", "Ngày Nhập Kho"};
+                break;
+            case "Hàng Điện Máy":
+                additionalColumns = new String[]{"Thời Gian Bảo Hành", "Công Suất"};
+                break;
+            default:
+                additionalColumns = new String[]{};
+        }
+
+        // Gộp cột chung và cột bổ sung
+        String[] allColumns = Stream.concat(Arrays.stream(commonColumns), Arrays.stream(additionalColumns))
+                .toArray(String[]::new);
+
+        // Tạo bảng với cấu trúc cột
+        DefaultTableModel tableModel = new DefaultTableModel(allColumns, 0) {
             @Override
             public boolean isCellEditable(int row, int column) {
                 return false;
             }
         };
 
+
         for (GetProductlistViewModel product : data) {
-            Object[] row = {
-                    product.getMaHang(),
-                    product.getTenHang(),
-                    product.getSoLuongTon(),
-                    product.getDonGia(),
-                    product.getVAT(),
-            };
-            tableModel.addRow(row);
+            List<String> row = new ArrayList<>();
+            row.add(product.maHang);
+            row.add(product.tenHang);
+            row.add(product.soLuongTon);
+            row.add(product.donGia);
+            row.add(product.VAT);
+
+            // Kiểm tra loại sản phẩm trước khi ép kiểu
+            if (product instanceof ThucPhamViewModel thucPham) {
+                row.add(thucPham.getNgaySanXuat());
+                row.add(thucPham.getNgayHetHan());
+                row.add(thucPham.getNhaCungCap());
+            } else if (product instanceof SanhSuViewModel sanhSu) {
+                row.add(sanhSu.getNhaSanXuat());
+                row.add(sanhSu.getNgayNhapKho());
+            } else if (product instanceof DienMayViewModel dienMay) {
+                row.add(dienMay.getThoiGianBaoHanh());
+                row.add(dienMay.getCongSuat());
+            }
+
+            tableModel.addRow(row.toArray());
+
         }
 
         JTable table = new JTable(tableModel);
         scrollPane.setViewportView(table);
 
-        // lắng nghe sự kiện chọn dòng
+        // Lắng nghe sự kiện chọn dòng
         table.getSelectionModel().addListSelectionListener(e -> {
             if (!e.getValueIsAdjusting()) {
                 int selectedRow = table.getSelectedRow();
@@ -128,6 +173,7 @@ public class MainView implements GetProductListObserver, GetTypeListObserver {
             }
         });
     }
+
 
     @Override
     public void updateGetTypeList(List<GetTypeListViewModel> data) {

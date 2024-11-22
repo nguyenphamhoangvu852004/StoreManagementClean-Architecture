@@ -1,5 +1,6 @@
 package com.example.dtos.getProductListDTOs;
 
+import com.example.dtos.getProductListDTOs.GetProductListOutputDTOs.GetProductListOutputDTO;
 import com.example.interfaces.ResponseData;
 
 import java.util.List;

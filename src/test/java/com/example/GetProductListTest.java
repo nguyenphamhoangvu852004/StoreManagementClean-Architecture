@@ -2,11 +2,11 @@ package com.example;
 
 import com.example.database.MysqlGetProductList;
 import com.example.dtos.getProductListDTOs.GetProductListInputDTO;
-import com.example.dtos.getProductListDTOs.GetProductListOutputDTO;
+import com.example.dtos.getProductListDTOs.GetProductListOutputDTOs.GetProductListOutputDTO;
 import com.example.interfaces.DatabaseBoundary;
 import com.example.interfaces.InputBoundary;
 import com.example.ui.getAllProductListMVVP.GetProductListPresenter;
-import com.example.ui.getAllProductListMVVP.GetProductlistViewModel;
+import com.example.ui.getAllProductListMVVP.GetProductListViewModel.GetProductlistViewModel;
 import com.example.usecase.getProductList.GetProductListUseCase;
 import org.junit.Test;
 

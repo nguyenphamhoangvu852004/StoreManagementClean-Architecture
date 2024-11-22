@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="91a827fd-e7fe-4291-9a67-9a9a2917afda" name="Changes" comment="second commit">
+    <list default="true" id="91a827fd-e7fe-4291-9a67-9a9a2917afda" name="Changes" comment="update find">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/database/MysqlConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/database/MysqlConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/MainController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,20 +50,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "Application.MainView.executor": "Run",
-    "JUnit.GetProductListSevenDayExpiryTest.executor": "Run",
-    "JUnit.GetProductListSevenDayExpiryTest.getProductListSevenDayExpiryOK.executor": "Run",
-    "JUnit.GetProductListTest.executor": "Run",
-    "JUnit.GetProductListTest.testGetAllProductListOK.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/nphv8/Desktop/store-manager (2)"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MainView.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GetProductListSevenDayExpiryTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GetProductListSevenDayExpiryTest.getProductListSevenDayExpiryOK.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GetProductListTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GetProductListTest.testGetAllProductListOK.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/nphv8/Desktop/store-manager (2)&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\nphv8\Desktop\JavaSwingApps\store-manager\src\main\java\com\example\ui\getTypeListMVVP" />
@@ -185,12 +188,21 @@
       <option name="project" value="LOCAL" />
       <updated>1732285138319</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="update find">
+      <option name="closed" value="true" />
+      <created>1732286578133</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1732286578133</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="second commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="second commit" />
+    <MESSAGE value="update find" />
+    <option name="LAST_COMMIT_MESSAGE" value="update find" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

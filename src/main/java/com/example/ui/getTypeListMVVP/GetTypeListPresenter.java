@@ -20,9 +20,7 @@ public class GetTypeListPresenter extends GetTypeListSubject implements OutputBo
     public void exportResult(ResponseData responseData) {
         if (responseData instanceof GetTypeListResponseData) {
             this.listGetTypeOutputDTO = ((GetTypeListResponseData) responseData).getTypeList();
-
             this.listGetTypeViewModel.clear();
-
             for (GetTypeOutputDTO getTypeOutputDTO : listGetTypeOutputDTO) {
                 GetTypeListViewModel getTypeListViewModel = new GetTypeListViewModel(getTypeOutputDTO.getType());
                 this.listGetTypeViewModel.add(getTypeListViewModel);

@@ -1,6 +1,6 @@
 package com.example.usecase.getTypeList;
 
-import com.example.database.MysqlGetTypeList;
+import com.example.database.MysqlGetTypeProductList;
 import com.example.dtos.getTypeListDTOs.GetTypeListResponseData;
 import com.example.dtos.getTypeListDTOs.GetTypeOutputDTO;
 import com.example.interfaces.DatabaseBoundary;
@@ -24,7 +24,7 @@ public class GetTypeListUseCase implements InputBoundary {
     @Override
     public void execute(RequestData requestData) throws SQLException {
 
-        List<String> listType = ((MysqlGetTypeList) databaseBoundary).getAllTypeList();
+        List<String> listType = ((MysqlGetTypeProductList) databaseBoundary).getAllTypeProdcutList();
         List<GetTypeOutputDTO> list = new ArrayList<>();
         for (String type : listType) {
             GetTypeOutputDTO getTypeOutputDTO = new GetTypeOutputDTO(type);

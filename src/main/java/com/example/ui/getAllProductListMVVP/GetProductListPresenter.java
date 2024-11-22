@@ -40,14 +40,7 @@ public class GetProductListPresenter extends GetProductListSubject implements Ou
 
             notifyObservers(listProductViewModel);
         }
-    }
 
-    public List<GetProductListOutputDTO> getListOutDTO() {
-        return listOutDTO;
-    }
-
-    public List<GetProductlistViewModel> getListProductViewModel() {
-        return listProductViewModel;
     }
 }
 

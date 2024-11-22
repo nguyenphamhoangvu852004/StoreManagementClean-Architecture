@@ -1,6 +1,7 @@
 package com.example.dtos.getProductListSevenDayExpiryDTOs;
 
 import com.example.interfaces.RequestData;
+import com.example.interfaces.ResponseData;
 
 public class GetProductListSevenDayExpiryInputDTO implements RequestData {
     private String type;

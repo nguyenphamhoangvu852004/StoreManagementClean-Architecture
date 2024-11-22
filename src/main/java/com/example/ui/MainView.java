@@ -15,16 +15,16 @@ public class MainView implements GetProductListObserver, GetTypeListObserver {
     private JFrame frame;
     private JPanel controlPanel;
     private JScrollPane scrollPane;
-    private JButton addButton, editButton, deleteButton, expiryButton; // Thêm expiryButton
+    private JButton addButton, editButton, deleteButton, expiryButton, findProductButton; // Thêm expiryButton
     private JComboBox<String> typeComboBox;
     private MainController mainController;
+    private TextField findProductTextField;
 
     public MainView(MainController mainControllerr) {
         this.mainController = mainControllerr;
         frame = new JFrame("Product Management");
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.setSize(900, 600);
-
 
         // Tạo tiêu đề
         JLabel titleLabel = new JLabel("DANH SÁCH SẢN PHẨM", SwingConstants.CENTER);
@@ -49,11 +49,17 @@ public class MainView implements GetProductListObserver, GetTypeListObserver {
         editButton = new JButton("Sửa");
         deleteButton = new JButton("Xóa");
         expiryButton = new JButton("Sản phẩm gần hết hạn"); // Thêm nút mới
-
+        findProductButton = new JButton("Tìm Kiếm");
         controlPanel.add(addButton);
         controlPanel.add(editButton);
         controlPanel.add(deleteButton);
         controlPanel.add(expiryButton); // Thêm vào controlPanel
+
+        // Tạo trường tìm kiếm và thay đổi kích thước
+        findProductTextField = new TextField();
+        findProductTextField.setPreferredSize(new Dimension(200, 25)); // Thay đổi kích thước
+        controlPanel.add(findProductTextField);
+        controlPanel.add(findProductButton);
 
         // Hiển thị frame
         frame.setLocationRelativeTo(null);
@@ -72,15 +78,22 @@ public class MainView implements GetProductListObserver, GetTypeListObserver {
         return expiryButton;
     }
 
+    public JButton getFindProductButton() {
+        return findProductButton;
+    }
+
+    public TextField getFindProductTextField() {
+        return this.findProductTextField;
+    }
+
     private void handleTypeChange() throws SQLException {
         String selectedType = (String) typeComboBox.getSelectedItem();
         mainController.executeGetProductList(selectedType);
     }
 
-
     @Override
     public void updateGetProductList(List<GetProductlistViewModel> data) {
-          String[] columns = {"Mã Hàng", "Tên Hàng", "Số Lượng Tồn", "Đơn giá", "VAT"};
+        String[] columns = {"Mã Hàng", "Tên Hàng", "Số Lượng Tồn", "Đơn giá", "VAT"};
         DefaultTableModel tableModel = new DefaultTableModel(columns, 0) {
             @Override
             public boolean isCellEditable(int row, int column) {
@@ -108,9 +121,7 @@ public class MainView implements GetProductListObserver, GetTypeListObserver {
         typeComboBox.removeAllItems(); // Xóa các mục cũ
         typeComboBox.addItem("Tất Cả"); // Giá trị mặc định
         for (GetTypeListViewModel type : data) {
-
             typeComboBox.addItem(type.getType());
         }
     }
 }
-

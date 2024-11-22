@@ -36,11 +36,5 @@ public class GetProductListSevenDaysExpiryPresenter extends GetProductListSevenD
         notifyObservers(listSevenDaysExpiryViewModels);
     }
 
-    public List<GetProductListSevenDayExpiryOutputDTO> getListSevenDayExpiryOutputDTOS() {
-        return listSevenDayExpiryOutputDTOS;
-    }
 
-    public List<GetProductListSevenDaysExpiryViewModel> getListSevenDaysExpiryViewModels() {
-        return listSevenDaysExpiryViewModels;
-    }
 }

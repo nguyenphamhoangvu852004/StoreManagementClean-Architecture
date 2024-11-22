@@ -14,9 +14,6 @@ public class HangThucPham extends HangHoa {
         this.nhaCungCap = nhaCungCap;
     }
 
-    public HangThucPham() {
-
-    }
 
     @Override
     public double tinhVat() {

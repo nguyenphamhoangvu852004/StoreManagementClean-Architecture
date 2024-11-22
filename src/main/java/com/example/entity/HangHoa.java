@@ -16,8 +16,9 @@ public abstract class HangHoa {
         this.tenLoai = tenLoai;
     }
 
-    public HangHoa() {
+    public HangHoa(String maHang, String tenHang, int soLuongTon, double donGia) {
     }
+
 
     public String getTenLoai() {
         return tenLoai;

@@ -1,15 +1,25 @@
 package com.example;
 
 
+
+import com.example.addProduct.*;
+
 import com.example.database.FindProductDAO;
+
 import com.example.database.MysqlGetFoodList;
 import com.example.database.MysqlGetProductList;
 import com.example.database.MysqlGetTypeProductList;
 import com.example.dtos.FindProductByIdDTOs.FindProductDTO;
 import com.example.interfaces.DatabaseBoundary;
 import com.example.interfaces.InputBoundary;
+import com.example.removeProduct.database.RemoveProductDAO;
+import com.example.removeProduct.usecase.RemoveProductUseCase;
+import com.example.removeProduct.view.RemoveProductPresenter;
+import com.example.removeProduct.view.RemoveProductView;
+import com.example.removeProduct.view.RemoveProductViewModel;
 import com.example.interfaces.OutputBoundary;
 import com.example.interfaces.RequestData;
+
 import com.example.ui.MainController;
 import com.example.ui.MainView;
 import com.example.ui.findProductMVVP.FindProductPresenter;
@@ -47,6 +57,17 @@ public class Main {
         GetProductListSevenDaysExpiryPresenter getProductListSevenDaysExpiryPresenter = new GetProductListSevenDaysExpiryPresenter(listSevenDaysExpiryViewModels);
         InputBoundary getProductList7DaysExpiry = new GetProductListSevenDayExpiryUseCase(getProductListSevenDaysExpiryPresenter, getFoodList);
 
+        // Add UseCase
+        AddProductDAO addProductDAO = new AddProductDAO();
+        AddProductViewModel addViewModel = new AddProductViewModel();
+        AddProductPresenter addProductPresenter = new AddProductPresenter(addViewModel);
+        AddProductUseCase addProductUseCase = new AddProductUseCase(addProductPresenter, addProductDAO);
+
+        // Remove UseCase
+        RemoveProductDAO removeProductDAO = new RemoveProductDAO();
+        RemoveProductViewModel removeViewModel = new RemoveProductViewModel();
+        RemoveProductPresenter removeProductPresenter = new RemoveProductPresenter(removeViewModel);
+        RemoveProductUseCase removeProductUseCase = new RemoveProductUseCase(removeProductDAO, removeProductPresenter);
 
         DatabaseBoundary findProductDatabase = new FindProductDAO();
         OutputBoundary findProductPresenter = new FindProductPresenter();
@@ -57,7 +78,10 @@ public class Main {
                 getProductListUseCase,
                 getProductList7DaysExpiry,
                 getTypeListUseCase,
+                addProductUseCase,
+                removeProductUseCase
                 findProductUseCase
+
         );
         MainView mainView = new MainView(controller);
 
@@ -70,6 +94,25 @@ public class Main {
             getProductListSevenDaysExpiryPresenter.addObserver(getProductListSevenDaysExpiryView);
             try {
                 controller.executeGetProductListSevenDayExpiry("Hàng Thực Phẩm");
+            } catch (SQLException ex) {
+                throw new RuntimeException(ex);
+            }
+        });
+
+        // Delete
+        mainView.getDeleteButton().addActionListener(e -> {
+            String maHang = mainView.getMaHang();
+            RemoveProductView view = new RemoveProductView(maHang, controller, removeViewModel);
+            view.setVisible(true);
+        });
+
+        mainView.getAddButton().addActionListener(e -> {
+            AddProductView addProductView = new AddProductView(controller, addViewModel);
+
+            getTypelistPresenter.addObserver(addProductView);
+            addProductView.setVisible(true);
+            try {
+                getTypeListUseCase.execute(null);
             } catch (SQLException ex) {
                 throw new RuntimeException(ex);
             }

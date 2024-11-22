@@ -3,6 +3,8 @@ package com.example.removeProduct.view;
 
 import com.example.removeProduct.dto.RemoveProductOutputDTO;
 
+import java.sql.SQLException;
+
 public class RemoveProductPresenter implements RemoveProductOutputBoundary {
 
     private final RemoveProductViewModel viewModel;
@@ -13,7 +15,7 @@ public class RemoveProductPresenter implements RemoveProductOutputBoundary {
     }
 
     @Override
-    public void presenter(RemoveProductOutputDTO outputDTO) {
+    public void presenter(RemoveProductOutputDTO outputDTO) throws SQLException {
         this.viewModel.setMessage(outputDTO.getMessage());
     }
 

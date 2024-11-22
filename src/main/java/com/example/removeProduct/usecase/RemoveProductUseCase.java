@@ -6,6 +6,8 @@ import com.example.removeProduct.dto.RemoveProductDTO;
 import com.example.removeProduct.dto.RemoveProductOutputDTO;
 import com.example.removeProduct.view.RemoveProductOutputBoundary;
 
+import java.sql.SQLException;
+
 public class RemoveProductUseCase implements RemoveProductInputBoundary {
     private RemoveProductDatabaseBoundary removeDatabaseBoundary = null;
     private RemoveProductOutputBoundary removeOutputBoundary = null;
@@ -16,7 +18,7 @@ public class RemoveProductUseCase implements RemoveProductInputBoundary {
     }
 
     @Override
-    public void execute(RemoveProductDTO dto ){
+    public void execute(RemoveProductDTO dto ) throws SQLException {
         RemoveProductOutputDTO removeProductOutputDTO = new RemoveProductOutputDTO();
         if (dto.getMaHang() == null || dto.getMaHang().isEmpty()) {
             removeProductOutputDTO.setMessage("Mã hàng không được để trống");

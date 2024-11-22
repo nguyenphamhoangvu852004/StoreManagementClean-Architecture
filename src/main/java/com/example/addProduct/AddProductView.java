@@ -12,6 +12,7 @@ import javax.swing.text.AbstractDocument;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.SQLException;
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.Date;
@@ -189,7 +190,11 @@ public class AddProductView extends JFrame implements Subscriber, GetTypeListObs
                             productName, quantity, price, selectedType, manufactureDate, expiryDate, supplier
                     );
 
-                    controller.executeAddProduct(addProductDTO);
+                    try {
+                        controller.executeAddProduct(addProductDTO);
+                    } catch (SQLException ex) {
+                        throw new RuntimeException(ex);
+                    }
                 } else if ("Hàng Điện Máy".equals(selectedType)) {
                     int warrantyTime = 0;
                     if (warrantyTimeField != null && !warrantyTimeField.getText().trim().isEmpty()) {
@@ -209,7 +214,11 @@ public class AddProductView extends JFrame implements Subscriber, GetTypeListObs
                             productName, quantity, price, selectedType,
                             warrantyTime, power
                     );
-                    controller.executeAddProduct(addProductDTO);
+                    try {
+                        controller.executeAddProduct(addProductDTO);
+                    } catch (SQLException ex) {
+                        throw new RuntimeException(ex);
+                    }
                 } else if ("Hàng Sành Sứ".equals(selectedType)) {
                     LocalDate importDate = (importDateChooser != null && importDateChooser.getDate() != null)
                             ? convertToLocalDate(importDateChooser.getDate())
@@ -221,7 +230,16 @@ public class AddProductView extends JFrame implements Subscriber, GetTypeListObs
                     AddProductDTO addProductDTO = new AddProductDTO(
                             productName, quantity, price, selectedType, producer, importDate
                     );
-                    controller.executeAddProduct(addProductDTO);
+                    try {
+                        controller.executeAddProduct(addProductDTO);
+                    } catch (SQLException ex) {
+                        throw new RuntimeException(ex);
+                    }
+                }
+                try {
+                    controller.executeGetProductList("Tất Cả");
+                } catch (SQLException ex) {
+                    throw new RuntimeException(ex);
                 }
             }
         });
@@ -362,7 +380,9 @@ public class AddProductView extends JFrame implements Subscriber, GetTypeListObs
 
     @Override
     public void update() {
+
         JOptionPane.showMessageDialog(null, viewModel.getMessage());
+        viewModel.unSubscriber(this);
     }
 
     @Override

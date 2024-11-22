@@ -4,6 +4,7 @@ import com.example.entity.HangHoa;
 import com.example.entity.HangSanhSu;
 import com.example.entity.HangThucPham;
 
+import java.sql.SQLException;
 import java.time.LocalDate;
 
 public class AddProductUseCase implements AddProductInputBoundary {
@@ -19,7 +20,7 @@ public class AddProductUseCase implements AddProductInputBoundary {
     }
 
     @Override
-    public void execute(AddProductDTO addProductDTO) {
+    public void execute(AddProductDTO addProductDTO) throws SQLException {
         try {
 
             AddProductDAO database = (AddProductDAO) databaseBoundary;

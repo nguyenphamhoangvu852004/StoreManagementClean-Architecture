@@ -10,6 +10,7 @@ import com.example.database.MysqlGetFoodList;
 import com.example.database.MysqlGetProductList;
 import com.example.database.MysqlGetTypeProductList;
 import com.example.dtos.FindProductByIdDTOs.FindProductDTO;
+import com.example.dtos.getProductListDTOs.GetProductListInputDTO;
 import com.example.interfaces.DatabaseBoundary;
 import com.example.interfaces.InputBoundary;
 import com.example.removeProduct.database.RemoveProductDAO;
@@ -79,7 +80,7 @@ public class Main {
                 getProductList7DaysExpiry,
                 getTypeListUseCase,
                 addProductUseCase,
-                removeProductUseCase
+                removeProductUseCase,
                 findProductUseCase
 
         );
@@ -116,6 +117,8 @@ public class Main {
             } catch (SQLException ex) {
                 throw new RuntimeException(ex);
             }
+
+
         });
 
         controller.executeGetTypeList();

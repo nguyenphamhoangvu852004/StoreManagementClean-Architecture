@@ -8,6 +8,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.SQLException;
 
 public class RemoveProductView extends JFrame implements Subscriber {
 
@@ -51,8 +52,17 @@ public class RemoveProductView extends JFrame implements Subscriber {
             public void actionPerformed(ActionEvent e) {
                 // Thực hiện logic xóa sản phẩm tại đây
                 RemoveProductDTO dto = new RemoveProductDTO(productId);
-                controller.executeRemoveProduct(dto);
+                try {
+                    controller.executeRemoveProduct(dto);
+                } catch (SQLException ex) {
+                    throw new RuntimeException(ex);
+                }
                 dispose();
+                try {
+                    controller.executeGetProductList("Tất Cả");
+                } catch (SQLException ex) {
+                    throw new RuntimeException(ex);
+                }
             }
         });
 

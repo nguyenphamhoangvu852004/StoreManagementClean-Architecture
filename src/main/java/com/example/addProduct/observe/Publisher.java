@@ -1,5 +1,6 @@
 package com.example.addProduct.observe;
 
+import java.sql.SQLException;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -17,7 +18,7 @@ public class Publisher {
 
     }
 
-    public void notifySubscribers(){
+    public void notifySubscribers() throws SQLException {
         for (Subscriber subscriber : subscribers) {
             subscriber.update();
         }

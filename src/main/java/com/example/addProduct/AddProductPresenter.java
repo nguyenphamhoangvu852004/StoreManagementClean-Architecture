@@ -1,5 +1,7 @@
 package com.example.addProduct;
 
+import java.sql.SQLException;
+
 public class AddProductPresenter implements AddProductOutputBoundary {
 
     private AddProductViewModel addProductViewModel;
@@ -13,7 +15,7 @@ public class AddProductPresenter implements AddProductOutputBoundary {
     }
 
     @Override
-    public void presenter(AddProductOutputDTO addProductOutputDTO) {
+    public void presenter(AddProductOutputDTO addProductOutputDTO) throws SQLException {
         addProductViewModel.setMessage(addProductOutputDTO.getMessage());
     }
 

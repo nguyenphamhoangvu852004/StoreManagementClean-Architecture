@@ -28,7 +28,7 @@ public class MainController {
     private AddProductUseCase addProductUseCase;
     private RemoveProductUseCase removeProductUseCase;
 
-    public MainController(InputBoundary getProductListUseCase, InputBoundary getProductListSevenDayExpiryUseCase, InputBoundary getTypeListUseCase, AddProductUseCase addProductUseCase, RemoveProductUseCase removeProductUseCase) {
+    public MainController(InputBoundary getProductListUseCase, InputBoundary getProductListSevenDayExpiryUseCase, InputBoundary getTypeListUseCase, AddProductUseCase addProductUseCase, RemoveProductUseCase removeProductUseCase, InputBoundary findProductByIDUseCase) {
         this.getProductListUseCase = getProductListUseCase;
         this.getProductListSevenDayExpiryUseCase = getProductListSevenDayExpiryUseCase;
         this.getTypeListUseCase = getTypeListUseCase;
@@ -49,12 +49,13 @@ public class MainController {
         getTypeListUseCase.execute(null);
     }
 
-    public void executeAddProduct(AddProductDTO a) {
+    public void executeAddProduct(AddProductDTO a) throws SQLException {
         addProductUseCase.execute(a);
     }
 
-    public void executeRemoveProduct(RemoveProductDTO a){
+    public void executeRemoveProduct(RemoveProductDTO a) throws SQLException {
         removeProductUseCase.execute(a);
+    }
 
     public void executeFindProductByID(String s) throws SQLException {
         findProductByIDUseCase.execute(new FindProductDTO(s));

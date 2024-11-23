@@ -1,5 +1,0 @@
-package com.example.dtos.totalQuantityDTOs;
-
-public abstract class TotalQuantityHangHoaDTO {
-    public TotalQuantityHangHoaDTO() {}
-}

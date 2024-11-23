@@ -1,7 +1,0 @@
-package com.example.dtos.productInfoDetail;
-
-import com.example.interfaces.RequestData;
-
-public abstract class ProductDetailInfoRequest implements RequestData {
-
-}

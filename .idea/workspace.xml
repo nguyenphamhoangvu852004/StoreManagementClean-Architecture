@@ -5,24 +5,50 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="91a827fd-e7fe-4291-9a67-9a9a2917afda" name="Changes" comment="update find">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dtos/getProductListDTOs/GetProductListOutputDTOs/HangDienMayDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dtos/getProductListDTOs/GetProductListOutputDTOs/HangSanhSuDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dtos/getProductListDTOs/GetProductListOutputDTOs/HangThucPhamDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/getAllProductListMVVP/GetProductListViewModel/DienMayViewModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/getAllProductListMVVP/GetProductListViewModel/SanhSuViewModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/getAllProductListMVVP/GetProductListViewModel/ThucPhamViewModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/StoreManagementClean-Architecture.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/database/MysqlGetProductInfoDetail/MysqlGetProductInfoDetail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/database/QuantityProduct/QuantityProduct.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/database/UpdateProduct/UpdateProductSqlDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dtos/productInfoDetail/Request/DienMayDetailInfoRequestDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dtos/productInfoDetail/Request/ProductDetailInfoRequestDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dtos/productInfoDetail/Request/SanhSuDetailInfoRequestDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dtos/productInfoDetail/Request/ThucPhamDetailInfoRequestDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dtos/productInfoDetail/Response/DienMayDetailInfoResponseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dtos/productInfoDetail/Response/ProductHangHoaDetailInfoResponseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dtos/productInfoDetail/Response/SanhSuDetailInfoResponseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dtos/productInfoDetail/Response/ThucPhamDetailInfoResponseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dtos/totalQuantityDTOs/TotalQuantityDienMayDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dtos/totalQuantityDTOs/TotalQuantityDienMayResponseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dtos/totalQuantityDTOs/TotalQuantityHangHoaDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dtos/totalQuantityDTOs/TotalQuantityResponseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dtos/totalQuantityDTOs/TotalQuantitySanhSuDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dtos/totalQuantityDTOs/TotalQuantitySanhSuResponseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dtos/totalQuantityDTOs/TotalQuantityThucPhamDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dtos/totalQuantityDTOs/TotalQuantityThucPhamResponseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dtos/updateProductDTOS/UpdateDienMayDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dtos/updateProductDTOS/UpdateHangHoaDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dtos/updateProductDTOS/UpdateHangHoaResponseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dtos/updateProductDTOS/UpdateSanhSuDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dtos/updateProductDTOS/UpdateThucPhamDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/GetProductDetailInfoMVVP/DienMayDetailInfoModelView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/GetProductDetailInfoMVVP/GetProductDetailInfoPresenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/GetProductDetailInfoMVVP/SanhSuDetailInfoModelView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/GetProductDetailInfoMVVP/ThucPhamDetailInfoModelView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/TotalQuantityView/TotalQuantityPresenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/TotalQuantityView/TotalQuantityView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/TotalQuantityView/TotalQuantityViewModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/updateProductMVVP/UpdateProductPresenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/updateProductMVVP/UpdateProductView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/updateProductMVVP/UpdateProductViewModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/usecase/getProductDetailInfo/GetProductDetailInfoUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/usecase/totalQuantityUseCase/TotalQuantityUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/usecase/updateProduct/UpdateProductUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dtos/getProductListDTOs/GetProductListOutputDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dtos/getProductListDTOs/GetProductListOutputDTOs/GetProductListOutputDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dtos/getProductListDTOs/GetProductListResponseData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dtos/getProductListDTOs/GetProductListResponseData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/MainView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/MainView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/getAllProductListMVVP/GetProductListObserver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/getAllProductListMVVP/GetProductListObserver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/getAllProductListMVVP/GetProductListPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/getAllProductListMVVP/GetProductListPresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/getAllProductListMVVP/GetProductListSubject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/getAllProductListMVVP/GetProductListSubject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/getAllProductListMVVP/GetProductlistViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/getAllProductListMVVP/GetProductListViewModel/GetProductlistViewModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/getTypeListMVVP/GetTypeListObserver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/getTypeListMVVP/GetTypeListObserver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/usecase/getProductList/GetProductListUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/usecase/getProductList/GetProductListUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/GetProductListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/GetProductListTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +65,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
   </component>
   <component name="ProjectColorInfo">{
     &quot;customColor&quot;: &quot;&quot;,
@@ -61,17 +90,19 @@
     "JUnit.GetProductListTest.executor": "Run",
     "JUnit.GetProductListTest.testGetAllProductListOK.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/nphv8/Desktop/StoreManagementClean-Architecture"
+    "last_opened_file_path": "D:/CODE/university/vu-repo/StoreManagementClean-Architecture/src/main/java/com/example/usecase"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\CODE\university\vu-repo\StoreManagementClean-Architecture\src\main\java\com\example\usecase" />
+      <recent name="D:\CODE\university\vu-repo\StoreManagementClean-Architecture\src\main\java\com\example\ui" />
+      <recent name="D:\CODE\university\vu-repo\StoreManagementClean-Architecture\src\main\java\com\example\dtos" />
+      <recent name="D:\CODE\university\vu-repo\StoreManagementClean-Architecture\src\main\java\com\example\database" />
       <recent name="C:\Users\nphv8\Desktop\JavaSwingApps\store-manager\src\main\java\com\example\ui\getTypeListMVVP" />
-      <recent name="C:\Users\nphv8\Desktop\JavaSwingApps\store-manager\src\main\java\com\example\ui\getAllProductListSevenDaysExpiryMVVP" />
-      <recent name="C:\Users\nphv8\Desktop\JavaSwingApps\store-manager\src\main\java\com\example\addProduct" />
-      <recent name="C:\Users\nphv8\Desktop\JavaSwingApps\store-manager\src\main\java\com\example" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\nphv8\Desktop\JavaSwingApps\store-manager\src\main\java\com\example\addProduct" />

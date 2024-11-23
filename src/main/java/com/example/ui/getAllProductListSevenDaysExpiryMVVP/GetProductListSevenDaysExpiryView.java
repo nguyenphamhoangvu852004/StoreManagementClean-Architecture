@@ -25,7 +25,7 @@ public class GetProductListSevenDaysExpiryView implements GetProductListSevenDay
 
         // Column headers for the JTable
         String[] columns = {
-                "Mã Hàng", "Tên Hàng", "Số Lượng Tồn", "Đơn giá", "VAT"
+                "Mã Hàng", "Tên Hàng", "Số Lượng Tồn", "Đơn giá", "VAT","Ngày sản xuất", "Ngày hết hạn","Nhà Cung Cấp"
         };
 
         // Create table model
@@ -57,7 +57,10 @@ public class GetProductListSevenDaysExpiryView implements GetProductListSevenDay
                     product.getTenHang(),
                     product.getSoLuongTon(),
                     product.getDonGia(),
-                    product.getVAT()
+                    product.getVAT(),
+                    product.getNgaySanXuat(),
+                    product.getNgayHetHan(),
+                    product.getNhaCungCap()
             };
             tableModel.addRow(row);
         }

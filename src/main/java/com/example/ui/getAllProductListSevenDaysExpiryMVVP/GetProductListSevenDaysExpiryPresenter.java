@@ -5,7 +5,6 @@ import com.example.dtos.getProductListSevenDayExpiryDTOs.GetProductListSevenDayE
 import com.example.interfaces.OutputBoundary;
 import com.example.interfaces.ResponseData;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class GetProductListSevenDaysExpiryPresenter extends GetProductListSevenDaysExpirySubject implements OutputBoundary {
@@ -13,7 +12,7 @@ public class GetProductListSevenDaysExpiryPresenter extends GetProductListSevenD
     private List<GetProductListSevenDayExpiryOutputDTO> listSevenDayExpiryOutputDTOS = null;
     private List<GetProductListSevenDaysExpiryViewModel> listSevenDaysExpiryViewModels = null;
 
-    public GetProductListSevenDaysExpiryPresenter(List<GetProductListSevenDaysExpiryViewModel> listSevenDaysExpiryViewModels){
+    public GetProductListSevenDaysExpiryPresenter(List<GetProductListSevenDaysExpiryViewModel> listSevenDaysExpiryViewModels) {
         this.listSevenDaysExpiryViewModels = listSevenDaysExpiryViewModels;
     }
 
@@ -29,12 +28,17 @@ public class GetProductListSevenDaysExpiryPresenter extends GetProductListSevenD
                     product.getTenHang(),
                     String.valueOf(product.getSoLuongTon()),
                     String.valueOf(product.getDonGia()),
-                    String.valueOf(product.getVAT())
+                    String.valueOf(product.getVAT()),
+                    String.valueOf(product.getNgaySanXuat()),
+                    String.valueOf(product.getNgayHetHan()),
+                    product.getNhaCungCap()
             );
             this.listSevenDaysExpiryViewModels.add(getProductListSevenDaysExpiryViewModel);
         }
         notifyObservers(listSevenDaysExpiryViewModels);
     }
 
-
+    public List<GetProductListSevenDaysExpiryViewModel> getListSevenDaysExpiryViewModels() {
+        return listSevenDaysExpiryViewModels;
+    }
 }

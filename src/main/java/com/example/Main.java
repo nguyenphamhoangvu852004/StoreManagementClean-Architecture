@@ -8,7 +8,7 @@ import com.example.database.FindProductDAO;
 
 import com.example.database.MysqlGetFoodList;
 import com.example.database.MysqlGetProductList;
-import com.example.database.MysqlGetTypeProductList;
+import com.example.database.MysqlGetTypeList;
 import com.example.dtos.FindProductByIdDTOs.FindProductDTO;
 import com.example.interfaces.DatabaseBoundary;
 import com.example.interfaces.InputBoundary;
@@ -46,7 +46,7 @@ public class Main {
         InputBoundary getProductListUseCase = new GetProductListUseCase(getProductListPresenter, getAllProductListDatabase);
 
         List<GetTypeListViewModel> listGetTypeViewModel = new ArrayList<>();
-        DatabaseBoundary getTypeListDatabase = new MysqlGetTypeProductList();
+        DatabaseBoundary getTypeListDatabase = new MysqlGetTypeList();
         GetTypeListPresenter getTypelistPresenter = new GetTypeListPresenter(listGetTypeViewModel);
         GetTypeListUseCase getTypeListUseCase = new GetTypeListUseCase(getTypelistPresenter, getTypeListDatabase);
 
@@ -85,7 +85,10 @@ public class Main {
 
 
         getProductListPresenter.addObserver(mainView);
+
         getTypelistPresenter.addObserver(mainView);
+        controller.executeGetTypeList();
+        getTypelistPresenter.removeObserver(mainView);
 
         mainView.getExpiryButton().addActionListener(e -> {
             GetProductListSevenDaysExpiryView getProductListSevenDaysExpiryView = new GetProductListSevenDaysExpiryView();
@@ -108,17 +111,19 @@ public class Main {
             AddProductView addProductView = new AddProductView(controller, addViewModel);
 
             getTypelistPresenter.addObserver(addProductView);
-            addProductView.setVisible(true);
+
             try {
-                getTypeListUseCase.execute(null);
+                controller.executeGetTypeList();
             } catch (SQLException ex) {
                 throw new RuntimeException(ex);
             }
 
+            addProductView.setVisible(true);
+
+
 
         });
 
-        controller.executeGetTypeList();
 
         mainView.getFindProductButton().addActionListener(e -> {
             String intput = mainView.getFindProductTextField().getText().toString().trim();

@@ -4,24 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="91a827fd-e7fe-4291-9a67-9a9a2917afda" name="Changes" comment="update find">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dtos/getProductListDTOs/GetProductListOutputDTOs/HangDienMayDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dtos/getProductListDTOs/GetProductListOutputDTOs/HangSanhSuDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dtos/getProductListDTOs/GetProductListOutputDTOs/HangThucPhamDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/getAllProductListMVVP/GetProductListViewModel/DienMayViewModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/getAllProductListMVVP/GetProductListViewModel/SanhSuViewModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/getAllProductListMVVP/GetProductListViewModel/ThucPhamViewModel.java" afterDir="false" />
+    <list default="true" id="91a827fd-e7fe-4291-9a67-9a9a2917afda" name="Changes" comment="fix observer pattern error">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dtos/getProductListDTOs/GetProductListOutputDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dtos/getProductListDTOs/GetProductListOutputDTOs/GetProductListOutputDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dtos/getProductListDTOs/GetProductListResponseData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dtos/getProductListDTOs/GetProductListResponseData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/database/MysqlGetTypeProductList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dtos/getProductListSevenDayExpiryDTOs/GetProductListSevenDayExpiryOutputDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dtos/getProductListSevenDayExpiryDTOs/GetProductListSevenDayExpiryOutputDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/MainView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/MainView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/getAllProductListMVVP/GetProductListObserver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/getAllProductListMVVP/GetProductListObserver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/getAllProductListMVVP/GetProductListPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/getAllProductListMVVP/GetProductListPresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/getAllProductListMVVP/GetProductListSubject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/getAllProductListMVVP/GetProductListSubject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/getAllProductListMVVP/GetProductlistViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/getAllProductListMVVP/GetProductListViewModel/GetProductlistViewModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/getTypeListMVVP/GetTypeListObserver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/getTypeListMVVP/GetTypeListObserver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/usecase/getProductList/GetProductListUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/usecase/getProductList/GetProductListUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/getAllProductListSevenDaysExpiryMVVP/GetProductListSevenDaysExpiryPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/getAllProductListSevenDaysExpiryMVVP/GetProductListSevenDaysExpiryPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/getAllProductListSevenDaysExpiryMVVP/GetProductListSevenDaysExpiryViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/getAllProductListSevenDaysExpiryMVVP/GetProductListSevenDaysExpiryViewModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/usecase/getListProductExpired/GetProductListSevenDayExpiryUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/usecase/getListProductExpired/GetProductListSevenDayExpiryUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/usecase/getTypeList/GetTypeListUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/usecase/getTypeList/GetTypeListUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/GetProductListSevenDayExpiryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/GetProductListSevenDayExpiryTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/example/GetProductListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/GetProductListTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,6 +34,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;nguyenphamhoangvu852004&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/nguyenphamhoangvu852004/StoreManagementClean-Architecture&quot;,
+    &quot;accountId&quot;: &quot;5b8112ba-bd07-4328-b114-3fd0d4d19b68&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
     &quot;customColor&quot;: &quot;&quot;,
     &quot;associatedIndex&quot;: 5
@@ -52,20 +58,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "Application.MainView.executor": "Run",
-    "JUnit.GetProductListSevenDayExpiryTest.executor": "Run",
-    "JUnit.GetProductListSevenDayExpiryTest.getProductListSevenDayExpiryOK.executor": "Run",
-    "JUnit.GetProductListTest.executor": "Run",
-    "JUnit.GetProductListTest.testGetAllProductListOK.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/nphv8/Desktop/StoreManagementClean-Architecture"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MainView.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GetProductListSevenDayExpiryTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GetProductListSevenDayExpiryTest.getProductListSevenDayExpiryOK.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GetProductListTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GetProductListTest.testGetAllProductListOK.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/nphv8/Desktop/StoreManagementClean-Architecture&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\nphv8\Desktop\JavaSwingApps\store-manager\src\main\java\com\example\ui\getTypeListMVVP" />
@@ -158,9 +164,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.GetProductListTest.testGetAllProductListOK" />
         <item itemvalue="JUnit.GetProductListSevenDayExpiryTest.getProductListSevenDayExpiryOK" />
         <item itemvalue="JUnit.GetProductListSevenDayExpiryTest" />
-        <item itemvalue="JUnit.GetProductListTest.testGetAllProductListOK" />
         <item itemvalue="JUnit.GetProductListTest" />
       </list>
     </recent_temporary>
@@ -174,11 +180,22 @@
       <option name="presentableId" value="Default" />
       <updated>1731212277921</updated>
     </task>
+    <task id="LOCAL-00001" summary="update get,find,add,remove">
+      <option name="closed" value="true" />
+      <created>1732297928021</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1732297928021</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update find" />
-    <option name="LAST_COMMIT_MESSAGE" value="update find" />
+    <MESSAGE value="update get,find,add,remove" />
+    <MESSAGE value="fix observer pattern error" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix observer pattern error" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -240,13 +257,33 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/usecase/getListProductExpired/GetProductListSevenDayExpiryUseCase.java</url>
-          <line>28</line>
+          <line>29</line>
           <option name="timeStamp" value="84" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/dtos/getProductListDTOs/GetProductListResponseData.java</url>
-          <line>11</line>
-          <option name="timeStamp" value="93" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/ui/MainView.java</url>
+          <line>107</line>
+          <option name="timeStamp" value="102" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/ui/MainView.java</url>
+          <line>108</line>
+          <option name="timeStamp" value="103" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/ui/MainView.java</url>
+          <line>109</line>
+          <option name="timeStamp" value="104" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/ui/MainView.java</url>
+          <line>111</line>
+          <option name="timeStamp" value="106" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/ui/MainView.java</url>
+          <line>110</line>
+          <option name="timeStamp" value="107" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/usecase/displayProductManagementView/DisplayProductManagementForm.java</url>

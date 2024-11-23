@@ -105,21 +105,12 @@ public class MainView implements GetProductListObserver, GetTypeListObserver {
         String type = (String) typeComboBox.getSelectedItem();
 
         String[] commonColumns = {"Mã Hàng", "Tên Hàng", "Số Lượng Tồn", "Đơn giá", "VAT"};
-        String[] additionalColumns;
-
-        switch (type) {
-            case "Hàng Thực Phẩm":
-                additionalColumns = new String[]{"Ngày Sản Xuất", "Ngày Hết Hạn", "Nhà Cung Cấp"};
-                break;
-            case "Hàng Sành Sứ":
-                additionalColumns = new String[]{"Nhà Sản Xuất", "Ngày Nhập Kho"};
-                break;
-            case "Hàng Điện Máy":
-                additionalColumns = new String[]{"Thời Gian Bảo Hành", "Công Suất"};
-                break;
-            default:
-                additionalColumns = new String[]{};
-        }
+        String[] additionalColumns = switch (type) {
+            case "Hàng Thực Phẩm" -> new String[]{"Ngày Sản Xuất", "Ngày Hết Hạn", "Nhà Cung Cấp"};
+            case "Hàng Sành Sứ" -> new String[]{"Nhà Sản Xuất", "Ngày Nhập Kho"};
+            case "Hàng Điện Máy" -> new String[]{"Thời Gian Bảo Hành", "Công Suất"};
+            default -> new String[]{};
+        };
 
         // Gộp cột chung và cột bổ sung
         String[] allColumns = Stream.concat(Arrays.stream(commonColumns), Arrays.stream(additionalColumns))

@@ -26,6 +26,6 @@ public class GetProductListSevenDayExpiryTest {
         InputBoundary i = new GetProductListSevenDayExpiryUseCase(p, mdao);
         i.execute(new GetProductListSevenDayExpiryInputDTO("Hàng Thực Phẩm"));
 
-        assertEquals(3, p.getListSevenDayExpiryOutputDTOS().size()); // Kiểm tra số lượng sản phẩm là 10
+        assertEquals(3, p.getListSevenDaysExpiryViewModels().size()); // Kiểm tra số lượng sản phẩm là 10
     }
 }

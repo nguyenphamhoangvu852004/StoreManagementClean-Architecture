@@ -92,8 +92,12 @@ public class GetProductListPresenter extends GetProductListSubject implements Ou
             }
         }
 
-
         // Thông báo cho các observer
         notifyObservers(listProductViewModel);
+
+    }
+
+    public List<GetProductlistViewModel> getListProductViewModel() {
+        return listProductViewModel;
     }
 }

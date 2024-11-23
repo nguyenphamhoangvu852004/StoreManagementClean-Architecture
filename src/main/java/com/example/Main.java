@@ -4,6 +4,7 @@ package com.example;
 import com.example.database.MysqlGetFoodList;
 import com.example.database.MysqlGetProductInfoDetail.MysqlGetProductInfoDetail;
 import com.example.database.MysqlGetProductList;
+
 import com.example.database.MysqlGetTypeProductList;
 import com.example.database.QuantityProduct.QuantityProduct;
 import com.example.database.UpdateProduct.UpdateProductSqlDAO;
@@ -13,6 +14,10 @@ import com.example.dtos.productInfoDetail.Request.ThucPhamDetailInfoRequestDTO;
 import com.example.dtos.totalQuantityDTOs.TotalQuantityDienMayDTO;
 import com.example.dtos.totalQuantityDTOs.TotalQuantitySanhSuDTO;
 import com.example.dtos.totalQuantityDTOs.TotalQuantityThucPhamDTO;
+=======
+import com.example.database.MysqlGetTypeList;
+import com.example.dtos.FindProductByIdDTOs.FindProductDTO;
+
 import com.example.interfaces.DatabaseBoundary;
 import com.example.interfaces.InputBoundary;
 import com.example.interfaces.RequestData;
@@ -49,7 +54,7 @@ public class Main {
         InputBoundary getProductListUseCase = new GetProductListUseCase(getProductListPresenter, getAllProductListDatabase);
 
         List<GetTypeListViewModel> listGetTypeViewModel = new ArrayList<>();
-        DatabaseBoundary getTypeListDatabase = new MysqlGetTypeProductList();
+        DatabaseBoundary getTypeListDatabase = new MysqlGetTypeList();
         GetTypeListPresenter getTypelistPresenter = new GetTypeListPresenter(listGetTypeViewModel);
         GetTypeListUseCase getTypeListUseCase = new GetTypeListUseCase(getTypelistPresenter, getTypeListDatabase);
 
@@ -86,7 +91,10 @@ public class Main {
 
 
         getProductListPresenter.addObserver(mainView);
+
         getTypelistPresenter.addObserver(mainView);
+        controller.executeGetTypeList();
+        getTypelistPresenter.removeObserver(mainView);
 
         mainView.getQuantityButton().addActionListener(e -> {
             RequestData requestDM = new TotalQuantityDienMayDTO();
@@ -111,20 +119,36 @@ public class Main {
                 String type = "";
 
 
+
                 if (maHang.contains("HDM")) {
                     type = "HangDienMay";
                     String selectedType = mainView.getSelectedType();
                     updateProductView.getUpdateProductView(type, controller,selectedType);
                     RequestData requestData = new DienMayDetailInfoRequestDTO(maHang);
 
+            getTypelistPresenter.addObserver(addProductView);
+
+            try {
+                controller.executeGetTypeList();
+            } catch (SQLException ex) {
+                throw new RuntimeException(ex);
+            }
+
+            addProductView.setVisible(true);
+
+
+
+
                     try {
                         controller.executeGetProductDetailInfo(requestData);
+
 
                     } catch (SQLException ex) {
                         throw new RuntimeException(ex);
                     }
                 } else if (maHang.contains("HTP")) {
                     type = "HangThucPham";
+
 
                     String selectedType = mainView.getSelectedType();
                     updateProductView.getUpdateProductView(type, controller, selectedType);

@@ -100,8 +100,28 @@ public class MainView implements GetProductListObserver, GetTypeListObserver {
 
     @Override
     public void updateGetProductList(List<GetProductlistViewModel> data) {
+
         String[] columns = {"Mã Hàng", "Tên Hàng", "Số Lượng Tồn", "Đơn giá", "VAT"};
         DefaultTableModel tableModel = new DefaultTableModel(columns, 0) {
+
+
+        String type = (String) typeComboBox.getSelectedItem();
+
+        String[] commonColumns = {"Mã Hàng", "Tên Hàng", "Số Lượng Tồn", "Đơn giá", "VAT"};
+        String[] additionalColumns = switch (type) {
+            case "Hàng Thực Phẩm" -> new String[]{"Ngày Sản Xuất", "Ngày Hết Hạn", "Nhà Cung Cấp"};
+            case "Hàng Sành Sứ" -> new String[]{"Nhà Sản Xuất", "Ngày Nhập Kho"};
+            case "Hàng Điện Máy" -> new String[]{"Thời Gian Bảo Hành", "Công Suất"};
+            default -> new String[]{};
+        };
+
+        // Gộp cột chung và cột bổ sung
+        String[] allColumns = Stream.concat(Arrays.stream(commonColumns), Arrays.stream(additionalColumns))
+                .toArray(String[]::new);
+
+        // Tạo bảng với cấu trúc cột
+        DefaultTableModel tableModel = new DefaultTableModel(allColumns, 0) {
+
             @Override
             public boolean isCellEditable(int row, int column) {
                 return false;

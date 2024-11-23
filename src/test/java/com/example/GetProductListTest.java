@@ -26,7 +26,7 @@ public class GetProductListTest {
         DatabaseBoundary databaseBoundary = new MysqlGetProductList();
         InputBoundary i = new GetProductListUseCase(p, databaseBoundary);
         i.execute(new GetProductListInputDTO("Tất Cả"));
-        List<GetProductListOutputDTO> list2 = p.getListOutDTO();
+        List<GetProductlistViewModel> list2 = p.getListProductViewModel();
         assertEquals(34, list2.size());
     }
 }

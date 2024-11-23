@@ -4,51 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="91a827fd-e7fe-4291-9a67-9a9a2917afda" name="Changes" comment="update find">
-      <change afterPath="$PROJECT_DIR$/.idea/StoreManagementClean-Architecture.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/database/MysqlGetProductInfoDetail/MysqlGetProductInfoDetail.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/database/QuantityProduct/QuantityProduct.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/database/UpdateProduct/UpdateProductSqlDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dtos/productInfoDetail/Request/DienMayDetailInfoRequestDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dtos/productInfoDetail/Request/ProductDetailInfoRequestDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dtos/productInfoDetail/Request/SanhSuDetailInfoRequestDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dtos/productInfoDetail/Request/ThucPhamDetailInfoRequestDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dtos/productInfoDetail/Response/DienMayDetailInfoResponseDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dtos/productInfoDetail/Response/ProductHangHoaDetailInfoResponseDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dtos/productInfoDetail/Response/SanhSuDetailInfoResponseDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dtos/productInfoDetail/Response/ThucPhamDetailInfoResponseDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dtos/totalQuantityDTOs/TotalQuantityDienMayDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dtos/totalQuantityDTOs/TotalQuantityDienMayResponseDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dtos/totalQuantityDTOs/TotalQuantityHangHoaDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dtos/totalQuantityDTOs/TotalQuantityResponseDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dtos/totalQuantityDTOs/TotalQuantitySanhSuDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dtos/totalQuantityDTOs/TotalQuantitySanhSuResponseDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dtos/totalQuantityDTOs/TotalQuantityThucPhamDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dtos/totalQuantityDTOs/TotalQuantityThucPhamResponseDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dtos/updateProductDTOS/UpdateDienMayDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dtos/updateProductDTOS/UpdateHangHoaDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dtos/updateProductDTOS/UpdateHangHoaResponseDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dtos/updateProductDTOS/UpdateSanhSuDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dtos/updateProductDTOS/UpdateThucPhamDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/GetProductDetailInfoMVVP/DienMayDetailInfoModelView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/GetProductDetailInfoMVVP/GetProductDetailInfoPresenter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/GetProductDetailInfoMVVP/SanhSuDetailInfoModelView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/GetProductDetailInfoMVVP/ThucPhamDetailInfoModelView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/TotalQuantityView/TotalQuantityPresenter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/TotalQuantityView/TotalQuantityView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/TotalQuantityView/TotalQuantityViewModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/updateProductMVVP/UpdateProductPresenter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/updateProductMVVP/UpdateProductView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/updateProductMVVP/UpdateProductViewModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/usecase/getProductDetailInfo/GetProductDetailInfoUseCase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/usecase/totalQuantityUseCase/TotalQuantityUseCase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/usecase/updateProduct/UpdateProductUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ui/MainView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ui/MainView.java" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,9 +22,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitToolBoxStore">
-    <option name="projectConfigVersion" value="5" />
-  </component>
+
   <component name="ProjectColorInfo">{
     &quot;customColor&quot;: &quot;&quot;,
     &quot;associatedIndex&quot;: 5
@@ -81,21 +35,9 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "Application.MainView.executor": "Run",
-    "JUnit.GetProductListSevenDayExpiryTest.executor": "Run",
-    "JUnit.GetProductListSevenDayExpiryTest.getProductListSevenDayExpiryOK.executor": "Run",
-    "JUnit.GetProductListTest.executor": "Run",
-    "JUnit.GetProductListTest.testGetAllProductListOK.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/CODE/university/vu-repo/StoreManagementClean-Architecture/src/main/java/com/example/usecase"
+
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\CODE\university\vu-repo\StoreManagementClean-Architecture\src\main\java\com\example\usecase" />
@@ -189,9 +131,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.GetProductListTest.testGetAllProductListOK" />
         <item itemvalue="JUnit.GetProductListSevenDayExpiryTest.getProductListSevenDayExpiryOK" />
         <item itemvalue="JUnit.GetProductListSevenDayExpiryTest" />
-        <item itemvalue="JUnit.GetProductListTest.testGetAllProductListOK" />
         <item itemvalue="JUnit.GetProductListTest" />
       </list>
     </recent_temporary>
@@ -205,11 +147,22 @@
       <option name="presentableId" value="Default" />
       <updated>1731212277921</updated>
     </task>
+    <task id="LOCAL-00001" summary="update get,find,add,remove">
+      <option name="closed" value="true" />
+      <created>1732297928021</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1732297928021</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update find" />
-    <option name="LAST_COMMIT_MESSAGE" value="update find" />
+    <MESSAGE value="update get,find,add,remove" />
+    <MESSAGE value="fix observer pattern error" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix observer pattern error" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -271,13 +224,33 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/usecase/getListProductExpired/GetProductListSevenDayExpiryUseCase.java</url>
-          <line>28</line>
+          <line>29</line>
           <option name="timeStamp" value="84" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/dtos/getProductListDTOs/GetProductListResponseData.java</url>
-          <line>11</line>
-          <option name="timeStamp" value="93" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/ui/MainView.java</url>
+          <line>107</line>
+          <option name="timeStamp" value="102" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/ui/MainView.java</url>
+          <line>108</line>
+          <option name="timeStamp" value="103" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/ui/MainView.java</url>
+          <line>109</line>
+          <option name="timeStamp" value="104" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/ui/MainView.java</url>
+          <line>111</line>
+          <option name="timeStamp" value="106" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/ui/MainView.java</url>
+          <line>110</line>
+          <option name="timeStamp" value="107" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/usecase/displayProductManagementView/DisplayProductManagementForm.java</url>

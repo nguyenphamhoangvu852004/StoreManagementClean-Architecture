@@ -1,0 +1,10 @@
+package com.example.dtos.productInfoDetail;
+
+public class DienMayDetalInfoDTO extends ProductHangHoaDetailInfoDTO {
+
+    private int thoiGianBaoHanh; // Số tháng
+    private double congSuat; //
+
+
+
+}

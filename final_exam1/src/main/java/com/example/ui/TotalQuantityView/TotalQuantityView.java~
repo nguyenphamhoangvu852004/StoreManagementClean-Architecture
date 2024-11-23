@@ -1,0 +1,77 @@
+package com.example.ui.TotalQuantityView;
+
+import javax.swing.*;
+import java.awt.*;
+
+public class TotalQuantityView {
+
+    private JFrame frame;
+    private JPanel formPanel;
+    private JLabel mainLabel;
+    private JLabel thucPhamLabel, sanhSuLabel, dienMayLabel;
+    private JLabel thucPhamValue, sanhSuValue, dienMayValue;
+
+    public void  getQuantityView() {
+        // Initialize local variables
+        int thucPhamQuantity = 0;
+        int sanhSuQuantity = 0;
+        int dienMayQuantity = 0;
+
+        // Set up the main frame
+        frame = new JFrame("Product Quantities");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(400, 300);
+        frame.setLayout(new BorderLayout());
+
+        // Main label
+        mainLabel = new JLabel("QUANTITY");
+        mainLabel.setHorizontalAlignment(SwingConstants.CENTER);
+        mainLabel.setFont(new Font("Arial", Font.BOLD, 20));
+        frame.add(mainLabel, BorderLayout.NORTH);
+
+        // Form panel with GridLayout
+        formPanel = new JPanel();
+        formPanel.setLayout(new GridLayout(3, 2, 10, 10)); // 3 rows, 2 columns
+
+        // Initialize labels
+        thucPhamLabel = new JLabel("Thực Phẩm:");
+        thucPhamValue = new JLabel(String.valueOf(thucPhamQuantity));
+        sanhSuLabel = new JLabel("Sành Sứ:");
+        sanhSuValue = new JLabel(String.valueOf(sanhSuQuantity));
+        dienMayLabel = new JLabel("Điện Máy:");
+        dienMayValue = new JLabel(String.valueOf(dienMayQuantity));
+
+        // Align text in value labels
+        thucPhamValue.setHorizontalAlignment(SwingConstants.RIGHT);
+        sanhSuValue.setHorizontalAlignment(SwingConstants.RIGHT);
+        dienMayValue.setHorizontalAlignment(SwingConstants.RIGHT);
+
+        // Add labels to the panel
+        formPanel.add(thucPhamLabel);
+        formPanel.add(thucPhamValue);
+
+        formPanel.add(sanhSuLabel);
+        formPanel.add(sanhSuValue);
+
+        formPanel.add(dienMayLabel);
+        formPanel.add(dienMayValue);
+
+        // Add the form panel to the frame
+        frame.add(formPanel, BorderLayout.CENTER);
+
+        // Make the frame visible
+        frame.setVisible(true);
+    }
+
+    public void setQuantityDienMayLabel(int quantity) {
+        dienMayValue.setText(String.valueOf(quantity));
+    }
+
+    public void setQuantitySanhSuLabel(int quantity) {
+        sanhSuValue.setText(String.valueOf(quantity));
+    }
+
+    public void setQuantityThucPhamLabel(int quantity) {
+        thucPhamValue.setText(String.valueOf(quantity));
+    }
+}

@@ -1,0 +1,227 @@
+package com.example.ui.updateProductMVVP;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class DisplayUpdateProductView {
+
+    private JFrame frame;
+    private JPanel formPanel;
+    private JLabel typeLabel, maHangLabel, tenHangLabel, soLuongTonLabel, donGiaLabel;
+    private JTextField maHangField, tenHangField, soLuongTonField, donGiaField;
+    private JButton submitButton;
+
+    private JLabel thoiGianBaoHanhLabel;
+    JTextField thoiGianBaoHanhField;
+    private JLabel congSuatLabel;
+    private JTextField congSuatField;
+    private JLabel ngaySanXuatLabel;
+
+    private JTextField ngaySanXuatField;
+    private JLabel ngayHetHanLabel;
+    private JTextField ngayHetHanField;
+    private JLabel nhaCungCapLabel;
+    private JTextField nhaCungCapField;
+
+
+    private JLabel nhaSanXuatLabel;
+    private JTextField nhaSanXuatField;
+
+    private JLabel ngayNhapKhoLabel;
+    private JTextField ngayNhapKhoField;
+
+    public void getUpdateProductView(String productType) {
+
+        frame = new JFrame("Update Product - " + productType);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        frame.setSize(800, 450);
+        frame.setLayout(new BorderLayout());
+
+        // Form Panel
+        formPanel = new JPanel();
+        formPanel.setLayout(new GridLayout(0, 2, 10, 10));
+
+        // Common Fields
+        maHangLabel = new JLabel("Mã Hàng:");
+        maHangField = new JTextField();
+
+        tenHangLabel = new JLabel("Tên Hàng:");
+        tenHangField = new JTextField();
+
+        soLuongTonLabel = new JLabel("Số Lượng Tồn:");
+        soLuongTonField = new JTextField();
+
+        donGiaLabel = new JLabel("Đơn Giá:");
+        donGiaField = new JTextField();
+
+        formPanel.add(maHangLabel);
+        formPanel.add(maHangField);
+
+        formPanel.add(tenHangLabel);
+        formPanel.add(tenHangField);
+
+        formPanel.add(soLuongTonLabel);
+        formPanel.add(soLuongTonField);
+
+        formPanel.add(donGiaLabel);
+        formPanel.add(donGiaField);
+
+        // Product-Specific Fields
+        switch (productType) {
+            case "HangDienMay":
+                addHangDienMayFields(formPanel);
+                break;
+
+            case "HangThucPham":
+                addHangThucPhamFields(formPanel);
+                break;
+
+            case "HangSanhSu":
+                addHangSanhSuFields(formPanel);
+                break;
+
+            default:
+                JOptionPane.showMessageDialog(frame, "Hãy chọn sản phẩm", "Error", JOptionPane.ERROR_MESSAGE);
+                return;
+        }
+
+        submitButton = new JButton("Update Product");
+        submitButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                handleSubmit(productType);
+            }
+        });
+
+        frame.add(formPanel, BorderLayout.CENTER);
+        frame.add(submitButton, BorderLayout.SOUTH);
+
+        frame.setVisible(true);
+    }
+
+    public void showUpdateSuccessMessage(String message) {
+        JOptionPane.showMessageDialog(this, message, "Success", JOptionPane.INFORMATION_MESSAGE);
+    }
+
+    // Method to display failure message
+    public void showUpdateFailedMessage(String message) {
+        JOptionPane.showMessageDialog(this, message, "Error", JOptionPane.ERROR_MESSAGE);
+    }
+
+    private void addHangDienMayFields(JPanel panel) {
+        thoiGianBaoHanhLabel = new JLabel("Thời Gian Bảo Hành (Tháng):");
+        thoiGianBaoHanhField = new JTextField();
+
+        congSuatLabel = new JLabel("Công Suất (W):");
+        congSuatField = new JTextField();
+
+        panel.add(thoiGianBaoHanhLabel);
+        panel.add(thoiGianBaoHanhField);
+
+        panel.add(congSuatLabel);
+        panel.add(congSuatField);
+    }
+
+    private void addHangThucPhamFields(JPanel panel) {
+        ngaySanXuatLabel = new JLabel("Ngày Sản Xuất:");
+        ngaySanXuatField = new JTextField();
+
+        ngayHetHanLabel = new JLabel("Ngày Hết Hạn:");
+        ngayHetHanField = new JTextField();
+
+        nhaCungCapLabel = new JLabel("Nhà Cung Cấp:");
+        nhaCungCapField = new JTextField();
+
+        panel.add(ngaySanXuatLabel);
+        panel.add(ngaySanXuatField);
+
+        panel.add(ngayHetHanLabel);
+        panel.add(ngayHetHanField);
+
+        panel.add(nhaCungCapLabel);
+        panel.add(nhaCungCapField);
+    }
+
+    private void addHangSanhSuFields(JPanel panel) {
+        JLabel nhaSanXuatLabel = new JLabel("Nhà Sản Xuất:");
+        JTextField nhaSanXuatField = new JTextField();
+
+        JLabel ngayNhapKhoLabel = new JLabel("Ngày Nhập Kho:");
+        JTextField ngayNhapKhoField = new JTextField();
+
+        panel.add(nhaSanXuatLabel);
+        panel.add(nhaSanXuatField);
+
+        panel.add(ngayNhapKhoLabel);
+        panel.add(ngayNhapKhoField);
+    }
+
+    private void handleSubmit(String productType) {
+        try {
+            // Common Fields
+            String maHang = maHangField.getText().trim();
+            String tenHang = tenHangField.getText().trim();
+            int soLuongTon = Integer.parseInt(soLuongTonField.getText().trim());
+            double donGia = Double.parseDouble(donGiaField.getText().trim());
+
+            // Specific Fields
+            switch (productType) {
+                case "HangDienMay":
+                    int thoiGianBaoHanh = Integer.parseInt(thoiGianBaoHanhField.getText().trim());
+                    double congSuat = Double.parseDouble(congSuatField.getText().trim());
+                    submitHangDienMay(maHang, tenHang, soLuongTon, donGia, thoiGianBaoHanh, congSuat);
+                    break;
+
+                case "HangThucPham":
+                    String ngaySanXuat = ngaySanXuatField.getText().trim();
+                    String ngayHetHan = ngayHetHanField.getText().trim();
+                    String nhaCungCap = nhaCungCapField.getText().trim();
+                    submitHangThucPham(maHang, tenHang, soLuongTon, donGia, ngaySanXuat, ngayHetHan, nhaCungCap);
+                    break;
+
+                case "HangSanhSu":
+                    String nhaSanXuat = nhaSanXuatField.getText().trim();
+                    String ngayNhapKho = ngayNhapKhoField.getText().trim();
+                    submitHangSanhSu(maHang, tenHang, soLuongTon, donGia, nhaSanXuat, ngayNhapKho);
+                    break;
+
+                default:
+                    JOptionPane.showMessageDialog(frame, "Invalid product type", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(frame, "Invalid number format", "Error", JOptionPane.ERROR_MESSAGE);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(frame, "Error: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }
+
+
+    private void submitHangDienMay(String maHang, String tenHang, int soLuongTon, double donGia, int thoiGianBaoHanh, double congSuat) {
+        // Example logic
+        System.out.println("Submitting HangDienMay:");
+        System.out.println("Mã Hàng: " + maHang + ", Tên Hàng: " + tenHang + ", Số Lượng Tồn: " + soLuongTon + ", Đơn Giá: " + donGia);
+        System.out.println("Thời Gian Bảo Hành: " + thoiGianBaoHanh + ", Công Suất: " + congSuat);
+
+        // Call the database logic here
+    }
+
+
+    private void submitHangThucPham(String maHang, String tenHang, int soLuongTon, double donGia, String ngaySanXuat, String ngayHetHan, String nhaCungCap) {
+        System.out.println("Submitting HangThucPham:");
+        System.out.println("Mã Hàng: " + maHang + ", Tên Hàng: " + tenHang + ", Số Lượng Tồn: " + soLuongTon + ", Đơn Giá: " + donGia);
+        System.out.println("Ngày Sản Xuất: " + ngaySanXuat + ", Ngày Hết Hạn: " + ngayHetHan + ", Nhà Cung Cấp: " + nhaCungCap);
+
+        // Call the database logic here
+    }
+
+
+    private void submitHangSanhSu(String maHang, String tenHang, int soLuongTon, double donGia, String nhaSanXuat, String ngayNhapKho) {
+        System.out.println("Submitting HangSanhSu:");
+        System.out.println("Mã Hàng: " + maHang + ", Tên Hàng: " + tenHang + ", Số Lượng Tồn: " + soLuongTon + ", Đơn Giá: " + donGia);
+        System.out.println("Nhà Sản Xuất: " + nhaSanXuat + ", Ngày Nhập Kho: " + ngayNhapKho);
+
+        // Call the database logic here
+    }
+}

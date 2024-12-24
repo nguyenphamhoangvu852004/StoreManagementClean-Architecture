@@ -1,0 +1,22 @@
+package com.example.dtos.productInfoDetail.Response;
+
+import com.example.dtos.productInfoDetail.Response.ProductHangHoaDetailInfoResponseDTO;
+
+import java.time.LocalDate;
+
+public class SanhSuDetailInfoResponseDTO extends ProductHangHoaDetailInfoResponseDTO {
+
+    private String nhaSanXuat;
+    private LocalDate ngayNhapKho;
+    public SanhSuDetailInfoResponseDTO(String maHang, String tenHang, int soLuongTon, double donGia, String tenLoai) {
+        super(maHang, tenHang, soLuongTon, donGia, tenLoai);
+    }
+
+    public String getNhaSanXuat() {
+        return nhaSanXuat;
+    }
+
+    public LocalDate getNgayNhapKho() {
+        return ngayNhapKho;
+    }
+}
